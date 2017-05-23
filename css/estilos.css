@@ -24,10 +24,11 @@ ul li {
 
 header {
     /*    border: 3px solid green;*/
-    background-image: url(/Fiore-Flowers-Web-site/img/banner_header.jpg);
+    background-image: url(../img/banner_header.jpg);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #cc0066;
-    height: 658px;
+    height: 520px;
 }
 
 #header_content {
@@ -59,11 +60,34 @@ header {
     padding: 5px 4px;
 }
 
+@-webkit-keyframes example {
+    from {
+        background-color: #cb97cb;
+    }
+    to {
+        background-color: #cb97cb#cb97cb;
+    }
+}
+
+@keyframes example {
+    from {
+        background-color: #cb97cb;
+        border-radius: 5px;
+    }
+    to {
+        background-color: #cc66cc;
+        border-radius: 10px;
+    }
+}
+
 #header_content nav ul li:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #e079ad), to(#cc0066));
-    background: linear-gradient(to bottom, #e079ad 5%, #cc0066 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e079ad', endColorstr='#cc0066', GradientType=0);
-    background-color: #e079ad;
+    border-bottom: solid 2px #cc0066;
+    background-color: #cc66cc;
+    border-radius: 10px;
+    -webkit-animation-name: example;
+    animation-name: example;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
 }
 
 #header_logo {
